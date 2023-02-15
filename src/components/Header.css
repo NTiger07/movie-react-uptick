@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 8%;
+  padding-right: 8%;
+  background-color: var(--dull-blue);
+  justify-content: space-between;
+  height: 9vh;
+  align-items: center;
+  overflow: hidden;
+}
+.logo {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-family: "Sacramento", cursive;
+}
