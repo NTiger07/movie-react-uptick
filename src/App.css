@@ -40,16 +40,7 @@ a {
 button {
   cursor: pointer;
 }
-.svgs {
-  width: 20px;
-  margin-right: 10px;
-}
 .main_container {
   background-color: #1b2430;
 }
-.footerroof {
-  background-color: #253345;
-  height: 5px;
-  margin-left: 7vw;
-  margin-right: 7vw;
-}
+
