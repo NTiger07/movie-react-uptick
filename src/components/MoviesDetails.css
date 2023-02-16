@@ -24,6 +24,9 @@
 .details_container {
   height: 50vh;
   display: flex;
+  justify-content: space-between;
+  padding-left: 2vw;
+  padding-right: 2vw;
   margin-top: 10vh;
 }
 .details_image {
