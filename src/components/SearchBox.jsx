@@ -18,13 +18,7 @@ const SearchBox = (props) => {
         onKeyUp={props.getMovies}
       />
       <button id="searchBtn">
-        <img
-          src={searchImg}
-          alt="search"
-          className="svgs"
-          onClick={props.getMovies}
-          disabled={props.isLoading}
-        />
+        <img src={searchImg} alt="search" className="svgs" />
       </button>
     </div>
   );

@@ -4,7 +4,9 @@ import countries from "./countries";
 import "./MoviesContainer.css";
 
 const MoviesContainer = (props) => {
-  const movieselem = props.movies.map(movie()=>{})
+  const movieselem = props.movies.map((movie) => {
+    return <MoviesItem />;
+  });
   // const movieselem = countries.map(({ id, name, flag }) => (
   //   <MoviesItem key={id} flag={flag} name={name} />
   // ));

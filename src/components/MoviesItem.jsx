@@ -5,7 +5,7 @@ const MoviesItem = (props) => {
   return (
     <div className="movies_item">
       <div className="movies_item-image">
-        <img src={props.flag} alt="movie" />
+        <img src={props.img} alt="movie" />
       </div>
       <div className="movies_item-content">
         <span>{props.name}</span>

@@ -15,11 +15,9 @@ const App = () => {
   const [searchValue, setSearchValue] = useState("");
 
   const getMovieRequest = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=`;
-
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1531fa9c`;
     const result = await Axios.get(url);
-    const resultJson = await result.json();
-
+    const resultJson = await result.data;
     if (resultJson.Search) {
       setMovies(resultJson.Search);
     }
