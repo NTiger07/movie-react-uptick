@@ -6,7 +6,7 @@ import "./MoviesContainer.css";
 const MoviesContainer = (props) => {
   const movieselem = props.movies.map((movie) => {
     return (
-      <Link to={`/movies/${movie.idmbID}`}>
+      <Link to={`/movies/${movie.imdbID}`}>
         <MoviesItem
           key={movie.imdbID}
           poster={movie.Poster}

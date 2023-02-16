@@ -6,7 +6,7 @@ import arrow from "../svgs/arrow-left.svg";
 
 export default function CountriesDetails(props) {
   const { id } = useParams();
-  const movie = props.movies.find((m) => String(m.id) === id);
+  const movie = props.movies.find((m) => String(m.imdbID) === id);
 
   if (!movie) {
     return <Error />;
@@ -24,7 +24,7 @@ export default function CountriesDetails(props) {
       </Link>
       <div className="details_container">
         <div className="details_image">
-          <img src={movie.flag} alt="country-flag" />
+          <img src={movie.Poster} alt="country-flag" />
         </div>
         <div className="details_content">
           <h1>{movie.name}</h1>
