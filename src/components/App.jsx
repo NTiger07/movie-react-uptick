@@ -9,9 +9,9 @@ import "../fonts/Sacramento/Sacramento-Regular.ttf";
 import "../App.css";
 
 const App = () => {
-  // const [movies, setMovies] = useState([]);
-  // const [favourites, setFavourites] = useState([]);
-  // const [searchValue, setSearchValue] = useState("");
+  const [movies, setMovies] = useState([]);
+  const [favourites, setFavourites] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
   return (
     <div className="main_container">
       <BrowserRouter>
@@ -21,8 +21,7 @@ const App = () => {
             element={
               <>
                 <Header />
-                <SearchBox />
-                <MoviesContainer/>
+                <MoviesContainer />
               </>
             }
           />

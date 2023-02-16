@@ -1,17 +1,26 @@
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  height: 10vh;
+  height: max-content;
+}
 .navbar {
   display: flex;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  padding-left: 8%;
-  padding-right: 8%;
   background-color: var(--dull-blue);
   justify-content: space-between;
-  height: 9vh;
   align-items: center;
   overflow: hidden;
 }
 .logo {
   font-size: 3.5rem;
   font-weight: 700;
+  color: #3792e4;
+  background: linear-gradient(60deg, #3792e4, #31cabd);
+  background-clip: text;
+  color: transparent;
   font-family: "Sacramento", cursive;
 }
