@@ -1,0 +1,73 @@
+.drop_down {
+  flex-direction: column;
+  width: fit-content;
+  align-self: center;
+  background-color: rgba(37, 8, 7, 0.753);
+  padding: 30px;
+  display: flex;
+  z-index: 5;
+  border-radius: 16px;
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  transform: scale(0.8);
+}
+.drop_down h1 {
+  color: gray;
+}
+.dropdown_head {
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown_head img {
+  width: 45px;
+  cursor: pointer;
+}
+.filter_container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.filter_container-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.label-title {
+  font-weight: 600;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+.filter_container-button {
+  margin-top: 10px;
+  display: flex;
+  margin-left: 20px;
+}
+#resetBtn {
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  border-radius: 22px;
+  color: gray;
+}
+#applyBtn {
+  background-color: var(--light-blue);
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 15px;
+  border: none;
+  outline: none;
+  border-radius: 22px;
+  color: #fff;
+}

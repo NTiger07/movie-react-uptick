@@ -43,4 +43,13 @@ button {
 .main_container {
   background-color: #1b2430;
 }
-
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  height: 10vh;
+  height: max-content;
+}

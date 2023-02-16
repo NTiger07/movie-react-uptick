@@ -9,8 +9,8 @@ const MoviesItem = (props) => {
       </div>
       <div className="movies_item-content">
         <span>{props.title}</span>
-        <span>{props.rating}</span>
-        <span>favourite</span>
+        <span>{props.year}</span>
+        <span>{props.length}</span>
       </div>
     </div>
   );

@@ -1,0 +1,4 @@
+if no image dont render
+filter finish
+details style and content
+ratings item fix
