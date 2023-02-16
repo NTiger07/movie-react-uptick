@@ -27,48 +27,17 @@ export default function CountriesDetails(props) {
           <img src={movie.Poster} alt="country-flag" />
         </div>
         <div className="details_content">
-          <h1>{movie.name}</h1>
+          <h1>{movie.Title}</h1>
           <div className="points-container">
-            <div className="content_pointsone">
-              <span>
-                <b>Native Name: </b>
-                {movie.capital}
-              </span>
-              <span>
-                <b>Population: </b>
-                {movie.population}
-              </span>
-              <span>
-                <b>Region: </b>
-                {movie.region}
-              </span>
-              <span>
-                <b>Sub Region: </b>
-                {movie.region}
-              </span>
-              <span>
-                <b>Capital: </b>
-                {movie.capital}
-              </span>
-            </div>
-            <div className="content_pointstwo">
-              <span>
-                <b>Top Level Domain: </b>-
-              </span>
-              <span>
-                <b>Currencies: </b>-
-              </span>
-              <span>
-                <b>Languages: </b>
-                {movie.languages}
-              </span>
-            </div>
-          </div>
-          <div className="details_border">
-            <b>Border Countries: </b>
-            <span>-</span>
-            <span>-</span>
-            <span>-</span>
+            <span>
+              <b>Release Date: </b>
+            </span>
+            <span>
+              <b>Genre(s): </b>
+            </span>
+            <span>
+              <b>Plot: </b>
+            </span>
           </div>
         </div>
       </div>

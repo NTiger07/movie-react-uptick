@@ -29,6 +29,7 @@
 .details_image {
   background-color: black;
   width: 50%;
+  width: max-content;
   overflow: hidden;
 }
 .details_image img {
@@ -44,11 +45,8 @@
 }
 .points-container {
   display: flex;
-}
-.content_pointsone,
-.content_pointstwo {
-  display: flex;
   flex-direction: column;
-  line-height: 30px;
-  margin-right: 30px;
+}
+.points-container span {
+  color: #fff;
 }
