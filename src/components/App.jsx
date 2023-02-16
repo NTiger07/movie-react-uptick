@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import Header from "./Header";
+import MoviesDetails from "./MoviesDetails";
 import SearchBox from "./SearchBox";
 import MoviesContainer from "./MoviesContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -37,6 +38,14 @@ const App = () => {
               <>
                 <Header setSearchValue={setSearchValue} />
                 <MoviesContainer movies={movies} />
+              </>
+            }
+          />
+          <Route
+            path="/movies/:id"
+            element={
+              <>
+                <MoviesDetails movies={movies} />
               </>
             }
           />

@@ -1,5 +1,18 @@
 .movies_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+}
+.movies_container a {
+  height: 45vh;
+  width: 20%;
+  padding: 0;
+  margin: 30px;
+  border-radius: 12px;
+  transition: all 0.4s ease-in-out;
+  color: #000;
+}
+.movies_container a:hover {
+  transform: scale(1.02);
+  transition: all 0.4s ease-in-out;
 }

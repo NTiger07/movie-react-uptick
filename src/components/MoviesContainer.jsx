@@ -1,15 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MoviesItem from "./MoviesItem.jsx";
-import countries from "./countries";
 import "./MoviesContainer.css";
 
 const MoviesContainer = (props) => {
   const movieselem = props.movies.map((movie) => {
-    return <MoviesItem />;
+    return (
+      <Link to={`/movies/${movie.idmbID}`}>
+        <MoviesItem
+          key={movie.imdbID}
+          poster={movie.Poster}
+          title={movie.Title}
+          rating={movie.imdbRating}
+        />
+      </Link>
+    );
   });
-  // const movieselem = countries.map(({ id, name, flag }) => (
-  //   <MoviesItem key={id} flag={flag} name={name} />
-  // ));
 
   return <div className="movies_container">{movieselem}</div>;
 };
