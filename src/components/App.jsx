@@ -13,17 +13,19 @@ import SearchBox from "./SearchBox";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
-  const [favourites, setFavourites] = useState([]);
+  // const [favourites, setFavourites] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+  const [parameters, setParameters] = React.useState("");
   const [toggleFilter, setToggleFilter] = React.useState(true);
 
   const getMovieRequest = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1531fa9c`;
-    const result = await Axios.get(url);
-    const resultJson = await result.data;
-    if (resultJson.Search) {
-      setMovies(resultJson.Search);
-    }
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1531fa9c${parameters}`;
+    console.log(url);
+    // const result = await Axios.get(url);
+    // const resultJson = await result.data;
+    // if (resultJson.Search) {
+    //   setMovies(resultJson.Search);
+    // }
   };
 
   useEffect(() => {
@@ -39,15 +41,19 @@ const App = () => {
             element={
               <>
                 <div className="header_container">
-                  <Header setSearchValue={setSearchValue} />
+                  <Header />
                   <SearchBox
+                    setSearchValue={setSearchValue}
                     setToggleFilter={setToggleFilter}
                     toggleFilter={toggleFilter}
                   />
                 </div>
                 <MoviesContainer movies={movies} />
                 {!toggleFilter && (
-                  <DropDown setToggleFilter={setToggleFilter} />
+                  <DropDown
+                    setToggleFilter={setToggleFilter}
+                    setParameters={setParameters}
+                  />
                 )}
               </>
             }

@@ -3,8 +3,6 @@ import "./DropDown.css";
 import Cancel from "../svgs/cancel_icon.png";
 
 export default function DropDown(props) {
-  const [parameters, setParameters] = React.useState("");
-
   var year = React.useRef("");
   var genre = React.useRef("");
 
@@ -12,9 +10,9 @@ export default function DropDown(props) {
     props.setToggleFilter(true);
   };
   function apply() {
-    // var year = year.current.value;
+    var yearValue = year.current.value;
     // var genre = genre.current.value;
-    setParameters(`${year}${genre}`);
+    props.setParameters(yearValue);
     props.setToggleFilter(true);
   }
   function reset() {
@@ -28,18 +26,22 @@ export default function DropDown(props) {
         <img src={Cancel} alt="cancel" className="svgs" onClick={toggle} />
       </div>
       <div className="filter_container">
-        <div className="filter_container-item">
+        {/* <div className="filter_container-item">
           <span className="label-title">Genre</span>
           <select name="genre" id="genre" ref={props.genre}>
             <option value="">All</option>
             <input type="date" name="" id="" />
           </select>
-        </div>
+        </div> */}
         <div className="filter_container-item">
           <span className="label-title">Year</span>
-          <select name="year" id="year" ref={props.year}>
+          <select name="year" id="year" ref={year}>
             <option value="">All</option>
-            <option value="&health=alcohol-cocktail">Alcohol-Cocktail</option>
+            <option value="&y=2023">2023</option>
+            <option value="&y=2022">2022</option>
+            <option value="&y=2021">2021</option>
+            <option value="&y=2020">2020</option>
+            <option value="&y=2019">2019</option>
           </select>
         </div>
       </div>
