@@ -12,6 +12,9 @@ export default function DropDown(props) {
   function apply() {
     var yearValue = year.current.value;
     var genreValue = genre.current.value;
+    if (yearValue > 2023) {
+      yearValue = 2023;
+    }
     props.setYear(yearValue);
     props.setGenre(genreValue);
     props.setToggleFilter(true);
@@ -40,14 +43,15 @@ export default function DropDown(props) {
         </div>
         <div className="filter_container-item">
           <span className="label-title">Year</span>
-          <select name="year" id="year" ref={year}>
-            <option value="">All</option>
-            <option value="&y=2023">2023</option>
-            <option value="&y=2022">2022</option>
-            <option value="&y=2021">2021</option>
-            <option value="&y=2020">2020</option>
-            <option value="&y=2019">2019</option>
-          </select>
+          <input
+            type="number"
+            min="1950"
+            max="2023"
+            name="year"
+            id="year"
+            ref={year}
+            defaultValue="2023"
+          />
         </div>
       </div>
       <div className="filter_container-button">
