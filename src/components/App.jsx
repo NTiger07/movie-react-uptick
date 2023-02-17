@@ -13,19 +13,17 @@ import SearchBox from "./SearchBox";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
-  // const [favourites, setFavourites] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [parameters, setParameters] = React.useState("");
   const [toggleFilter, setToggleFilter] = React.useState(true);
 
   const getMovieRequest = async (searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1531fa9c${parameters}`;
-    console.log(url);
-    // const result = await Axios.get(url);
-    // const resultJson = await result.data;
-    // if (resultJson.Search) {
-    //   setMovies(resultJson.Search);
-    // }
+    const result = await Axios.get(url);
+    const resultJson = await result.data;
+    if (resultJson.Search) {
+      setMovies(resultJson.Search);
+    }
   };
 
   useEffect(() => {
