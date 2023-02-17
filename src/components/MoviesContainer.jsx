@@ -14,7 +14,7 @@ const MoviesContainer = (props) => {
             title={movie.Title}
             rating={movie.imdbRating}
             year={movie.Year}
-            length={movie.Runtime}
+            duration={movie.Runtime}
           />
         </Link>
       );

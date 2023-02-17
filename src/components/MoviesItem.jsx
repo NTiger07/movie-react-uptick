@@ -9,8 +9,14 @@ const MoviesItem = (props) => {
       </div>
       <div className="movies_item-content">
         <span>{props.title}</span>
-        <span>{props.year}</span>
-        <span>{props.length}</span>
+        <span>
+          <b>Released: </b>
+          {props.year}
+        </span>
+        <span>
+          <b>Duration: </b>
+          {props.duration}
+        </span>
       </div>
     </div>
   );

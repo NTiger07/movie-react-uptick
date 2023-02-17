@@ -26,13 +26,6 @@ export default function DropDown(props) {
         <img src={Cancel} alt="cancel" className="svgs" onClick={toggle} />
       </div>
       <div className="filter_container">
-        {/* <div className="filter_container-item">
-          <span className="label-title">Genre</span>
-          <select name="genre" id="genre" ref={props.genre}>
-            <option value="">All</option>
-            <input type="date" name="" id="" />
-          </select>
-        </div> */}
         <div className="filter_container-item">
           <span className="label-title">Year</span>
           <select name="year" id="year" ref={year}>
