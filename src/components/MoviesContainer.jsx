@@ -5,7 +5,7 @@ import "./MoviesContainer.css";
 
 const MoviesContainer = (props) => {
   const movieselem = props.movies.map((movie) => {
-    if (movie.Poster) {
+    if (movie.Poster && props.genre === movie.genre) {
       return (
         <Link to={`/movies/${movie.imdbID}`}>
           <MoviesItem

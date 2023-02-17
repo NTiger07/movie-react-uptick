@@ -8,8 +8,8 @@
   z-index: 5;
   border-radius: 16px;
   position: absolute;
-  top: 10%;
-  right: 8%;
+  top: 8%;
+  right: 25%;
   transform: scale(0.8);
 }
 .drop_down h1 {
@@ -35,10 +35,11 @@
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  font: 22px;
 }
 .label-title {
   font-weight: 600;
-  font-size: 23px;
+  font-size: 28px;
   margin-bottom: 10px;
 }
 .filter_container-button {
@@ -70,4 +71,15 @@
   outline: none;
   border-radius: 22px;
   color: #fff;
+}
+select {
+  border-radius: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #000;
+  font-size: 16px;
+  outline: none;
+  border: none;
 }

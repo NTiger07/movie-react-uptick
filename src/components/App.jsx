@@ -14,11 +14,12 @@ import SearchBox from "./SearchBox";
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [parameters, setParameters] = React.useState("");
+  const [year, setYear] = React.useState("");
+  const [genre, setGenre] = React.useState("");
   const [toggleFilter, setToggleFilter] = React.useState(true);
 
   const getMovieRequest = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1531fa9c${parameters}`;
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1531fa9c${year}`;
     const result = await Axios.get(url);
     const resultJson = await result.data;
     if (resultJson.Search) {
@@ -46,11 +47,12 @@ const App = () => {
                     toggleFilter={toggleFilter}
                   />
                 </div>
-                <MoviesContainer movies={movies} />
+                <MoviesContainer movies={movies} genre={genre} />
                 {!toggleFilter && (
                   <DropDown
                     setToggleFilter={setToggleFilter}
-                    setParameters={setParameters}
+                    setYear={setYear}
+                    setGenre={setGenre}
                   />
                 )}
               </>
