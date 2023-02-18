@@ -1,6 +1,0 @@
-if no image dont render
-filter finish
-error style and content
-ratings item fix
-
-favicon

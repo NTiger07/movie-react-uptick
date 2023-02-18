@@ -1,3 +1,3 @@
-Source code for my Portfolio site
+Source code for my movie app for Uptick assessment
 
 Made with react
