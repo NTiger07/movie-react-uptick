@@ -33,9 +33,6 @@ export default function CountriesDetails(props) {
               <b>Release Date: {movie.Year}</b>
             </span>
             <span>
-              <b>Genre(s): {movie.Genre}</b>
-            </span>
-            <span>
               <b>Plot: {movie.Plot}</b>
             </span>
           </div>
