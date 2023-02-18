@@ -13,10 +13,6 @@ const MoviesItem = (props) => {
           <b>Released: </b>
           {props.year}
         </span>
-        <span>
-          <b>Duration: </b>
-          {props.duration}
-        </span>
       </div>
     </div>
   );

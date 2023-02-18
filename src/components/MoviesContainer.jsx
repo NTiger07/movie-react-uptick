@@ -5,16 +5,18 @@ import "./MoviesContainer.css";
 
 const MoviesContainer = (props) => {
   const movieselem = props.movies.map((movie) => {
-    if (movie.Poster && props.genre === movie.genre) {
+    if (movie.Poster) {
       return (
         <Link to={`/movies/${movie.imdbID}`}>
           <MoviesItem
             key={movie.imdbID}
             poster={movie.Poster}
             title={movie.Title}
-            rating={movie.imdbRating}
             year={movie.Year}
+            date={movie.Released}
             duration={movie.Runtime}
+            plot={movie.Plot}
+            genre={movie.Genre}
           />
         </Link>
       );

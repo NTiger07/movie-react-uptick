@@ -25,6 +25,8 @@ const App = () => {
     if (resultJson.Search) {
       setMovies(resultJson.Search);
     }
+
+    console.log(url);
   };
 
   useEffect(() => {
