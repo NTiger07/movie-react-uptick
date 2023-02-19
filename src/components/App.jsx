@@ -10,23 +10,23 @@ import "../fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf";
 import "../fonts/Sacramento/Sacramento-Regular.ttf";
 import "../App.css";
 import SearchBox from "./SearchBox";
+require("dotenv").config();
 
 const App = () => {
   const [movies, setMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState("spider-man");
   const [year, setYear] = React.useState("");
   const [genre, setGenre] = React.useState("");
   const [toggleFilter, setToggleFilter] = React.useState(true);
 
   const getMovieRequest = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=1531fa9c${year}`;
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=6db8969ab1758f7f886e121bcbab6c33&query=${searchValue}`;
     const result = await Axios.get(url);
     const resultJson = await result.data;
+    console.log(resultJson);
     if (resultJson.Search) {
       setMovies(resultJson.Search);
     }
-
-    console.log(url);
   };
 
   useEffect(() => {
