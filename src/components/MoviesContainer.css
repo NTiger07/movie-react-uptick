@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  padding-left: 7vw;
+  padding-right: 7vw;
 }
 .movies_container a {
   height: 45vh;
