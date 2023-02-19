@@ -11,7 +11,11 @@ const MoviesItem = (props) => {
         <span>{props.title}</span>
         <span>
           <b>Released: </b>
-          {props.year}
+          {props.date.slice(0, 4)}
+        </span>
+        <span>
+          <b>Rating: </b>
+          {props.rating === 0 ? "N/A" : props.rating}
         </span>
       </div>
     </div>
