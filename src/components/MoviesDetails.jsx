@@ -33,13 +33,16 @@ export default function CountriesDetails(props) {
           <h1>{movie.title}</h1>
           <div className="points-container">
             <span>
-              <b>Release Date: {movie.release_date}</b>
+              <b>Plot: </b>
+              {movie.overview}
             </span>
             <span>
-              <b>Plot: {movie.overview}</b>
+              <b>Release Date: </b>
+              {movie.release_date}
             </span>
             <span>
-              <b>Rating: {movie.vote_average}</b>
+              <b>Rating: </b>
+              {movie.vote_average}
             </span>
           </div>
         </div>
