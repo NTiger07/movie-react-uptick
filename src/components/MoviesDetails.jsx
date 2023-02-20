@@ -24,16 +24,22 @@ export default function CountriesDetails(props) {
       </Link>
       <div className="details_container">
         <div className="details_image">
-          <img src={movie.poster} alt="country-flag" />
+          <img
+            src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
+            alt="country-flag"
+          />
         </div>
         <div className="details_content">
           <h1>{movie.title}</h1>
           <div className="points-container">
             <span>
-              <b>Release Date: {movie.date.slice(0, 4)}</b>
+              <b>Release Date: {movie.release_date}</b>
             </span>
             <span>
-              <b>Plot: {movie.plot}</b>
+              <b>Plot: {movie.overview}</b>
+            </span>
+            <span>
+              <b>Rating: {movie.vote_average}</b>
             </span>
           </div>
         </div>
