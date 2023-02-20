@@ -13,7 +13,7 @@ import SearchBox from "./SearchBox";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState("spider-man");
+  const [searchValue, setSearchValue] = useState(`&query=spider-man`);
   const [results, setResults] = useState(0);
   const [year, setYear] = React.useState("");
   const [genre, setGenre] = React.useState("");
@@ -23,10 +23,9 @@ const App = () => {
   const getMovieRequest = async (searchValue) => {
     const base_url = "https://api.themoviedb.org/3/";
     setIsLoading(true);
-
-    const urldiscover = `${base_url}discover/movie?api_key=6db8969ab1758f7f886e121bcbab6c33${year}${genre}`;
-
-    const urlsearch = `${base_url}search/movie?api_key=6db8969ab1758f7f886e121bcbab6c33&query=${searchValue}${year}${genre}`;
+    var action = "search";
+    searchValue === "&query=" ? (action = `discover`) : (action = `search`);
+    const urlsearch = `${base_url}${action}/movie?api_key=6db8969ab1758f7f886e121bcbab6c33${searchValue}${year}${genre}`;
     const result = await Axios.get(urlsearch).catch(() => {
       setIsLoading(false);
     });

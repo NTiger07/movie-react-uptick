@@ -17,7 +17,7 @@ const SearchBox = (props) => {
         type="text"
         id="search_input"
         placeholder="Search for a movie, series or game"
-        onChange={(e) => props.setSearchValue(e.target.value)}
+        onChange={(e) => props.setSearchValue(`&query=${e.target.value}`)}
         onKeyUp={props.getMovies}
       />
       <button id="searchBtn">
