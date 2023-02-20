@@ -10,13 +10,16 @@ export default function DropDown(props) {
     props.setToggleFilter(true);
   };
   function apply() {
-    var yearValue = `&y=${year.current.value}`;
+    var yearValue = `&with_genres=${year.current.value}`;
+    var genreValue = `&release_year=${genre.current.value}`;
     props.setYear(yearValue);
+    props.setGenre(genreValue);
     props.setToggleFilter(true);
   }
   function reset() {
     props.setYear("");
     props.setGenre("");
+    props.setToggleFilter(true);
   }
   return (
     <div className="drop_down" id="dropDown">

@@ -14,23 +14,27 @@ import SearchBox from "./SearchBox";
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("spider-man");
-  const [results, setResults] = useState();
+  const [results, setResults] = useState(0);
   const [year, setYear] = React.useState("");
   const [genre, setGenre] = React.useState("");
   const [toggleFilter, setToggleFilter] = React.useState(true);
   const [isLoading, setIsLoading] = React.useState(false);
 
   const getMovieRequest = async (searchValue) => {
+    const base_url = "https://api.themoviedb.org/3/";
     setIsLoading(true);
-    const urlsearch = `https://api.themoviedb.org/3/search/movie?api_key=6db8969ab1758f7f886e121bcbab6c33&query=${searchValue}`;
-    const urldiscover = ``;
-    const result = await Axios.get(urlsearch);
+
+    const urldiscover = `${base_url}discover/movie?api_key=6db8969ab1758f7f886e121bcbab6c33${year}${genre}`;
+
+    const urlsearch = `${base_url}search/movie?api_key=6db8969ab1758f7f886e121bcbab6c33&query=${searchValue}${year}${genre}`;
+    const result = await Axios.get(urlsearch).catch(() => {
+      setIsLoading(false);
+    });
     const resultJson = await result.data.results;
     setResults(resultJson.length);
     if (resultJson) {
       setMovies(resultJson);
     }
-    setIsLoading(false);
   };
   useEffect(() => {
     getMovieRequest(searchValue);
