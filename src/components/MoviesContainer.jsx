@@ -25,7 +25,7 @@ const MoviesContainer = (props) => {
   return (
     <>
       <div className="movies_container">{movieselem}</div>
-      {!props.isLoading && (
+      {props.isLoading && (
         <div className="loading_container">
           <LoadingSpinner />
         </div>

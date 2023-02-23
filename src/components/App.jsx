@@ -18,16 +18,16 @@ const App = () => {
   const [year, setYear] = React.useState("");
   const [genre, setGenre] = React.useState("");
   const [toggleFilter, setToggleFilter] = React.useState(true);
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   const getMovieRequest = async (searchValue) => {
-    setIsLoading(true);
+    setIsLoading(false);
     const base_url = "https://api.themoviedb.org/3/";
     var action = "search";
     searchValue === "&query=" ? (action = `discover`) : (action = `search`);
     const urlsearch = `${base_url}${action}/movie?api_key=6db8969ab1758f7f886e121bcbab6c33${searchValue}${year}${genre}`;
     const result = await Axios.get(urlsearch).catch(() => {
-      setIsLoading(false);
+      setIsLoading(true);
     });
     const resultJson = await result.data.results;
     setResults(resultJson.length);
