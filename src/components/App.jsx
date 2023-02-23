@@ -21,8 +21,8 @@ const App = () => {
   const [isLoading, setIsLoading] = React.useState(false);
 
   const getMovieRequest = async (searchValue) => {
-    const base_url = "https://api.themoviedb.org/3/";
     setIsLoading(true);
+    const base_url = "https://api.themoviedb.org/3/";
     var action = "search";
     searchValue === "&query=" ? (action = `discover`) : (action = `search`);
     const urlsearch = `${base_url}${action}/movie?api_key=6db8969ab1758f7f886e121bcbab6c33${searchValue}${year}${genre}`;
