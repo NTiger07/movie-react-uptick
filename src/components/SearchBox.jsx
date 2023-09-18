@@ -16,7 +16,7 @@ const SearchBox = (props) => {
       <input
         type="text"
         id="search_input"
-        value="spider-man"
+        defaultValue="spider-man"
         placeholder="Search for a movie, series or game"
         onChange={(e) => props.setSearchValue(`&query=${e.target.value}`)}
         onKeyUp={props.getMovies}
